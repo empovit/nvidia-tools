@@ -175,14 +175,44 @@ PSID:                  MT_0000000575
 Security Attributes:   secure-fw
 ```
 
+### mstflint
+
+* Mentioned in the [alternative methods](https://docs.nvidia.com/dgx/dgx-rhel8-install-guide/installing-bf3-fw-steps.html#alternative-methods).
+* Download [here](https://www.openfabrics.org/downloads/mstflint/), but can also be installed on RHEL.
+* [mstflint FW Burning Tool README](https://network.nvidia.com/pdf/firmware/mstflint_README.txt).
+
+```console
+# dnf install -y -q mstflint
+...
+
+# lspci -d 15b3:
+0002:01:00.0 Ethernet controller: Mellanox Technologies MT2894 Family [ConnectX-6 Lx]
+0002:01:00.1 Ethernet controller: Mellanox Technologies MT2894 Family [ConnectX-6 Lx]
+
+# mstflint -d 0002:01:00.0 q
+Image type:            FS4
+FW Version:            26.33.1048
+FW Release Date:       29.4.2022
+Product Version:       26.33.1048
+Rom Info:              type=UEFI version=14.26.17 cpu=AMD64,AARCH64
+                       type=PXE version=3.6.502 cpu=AMD64
+Description:           UID                GuidsNumber
+Base GUID:             e8ebd3030070cf12        4
+Base MAC:              e8ebd370cf12            4
+Image VSD:             N/A
+Device VSD:            N/A
+PSID:                  MT_0000000575
+Security Attributes:   secure-fw
+```
+
 ## Firmware
 
 Latest firmware binaries: https://network.nvidia.com/support/firmware/firmware-downloads/
 
 ## Hardware
 
-Free servers on Beaker:
-* with ConnectX-6 https://beaker.engineering.redhat.com/free/?systemsearch-0.table=Devices%2FDescription&systemsearch-0.keyvalue=&systemsearch-0.operation=contains&systemsearch-0.value=connectx-6
-* with ConnectX-7 https://beaker.engineering.redhat.com/free/?systemsearch-0.table=Devices%2FDescription&systemsearch-0.keyvalue=&systemsearch-0.operation=contains&systemsearch-0.value=connectx-7
-* with BlueField-2 https://beaker.engineering.redhat.com/free/?systemsearch-0.table=Devices%2FDescription&systemsearch-0.keyvalue=&systemsearch-0.operation=contains&systemsearch-0.value=bluefield-2
-* with BlueField-3 https://beaker.engineering.redhat.com/free/?systemsearch-0.table=Devices%2FDescription&systemsearch-0.keyvalue=&systemsearch-0.operation=contains&systemsearch-0.value=bluefield-3
+Free servers on Beaker with:
+* [ConnectX-6](https://beaker.engineering.redhat.com/free/?systemsearch-0.table=Devices%2FDescription&systemsearch-0.keyvalue=&systemsearch-0.operation=contains&systemsearch-0.value=connectx-6)
+* [ConnectX-7](https://beaker.engineering.redhat.com/free/?systemsearch-0.table=Devices%2FDescription&systemsearch-0.keyvalue=&systemsearch-0.operation=contains&systemsearch-0.value=connectx-7)
+* [BlueField-2](https://beaker.engineering.redhat.com/free/?systemsearch-0.table=Devices%2FDescription&systemsearch-0.keyvalue=&systemsearch-0.operation=contains&systemsearch-0.value=bluefield-2)
+* [BlueField-3](https://beaker.engineering.redhat.com/free/?systemsearch-0.table=Devices%2FDescription&systemsearch-0.keyvalue=&systemsearch-0.operation=contains&systemsearch-0.value=bluefield-3)
