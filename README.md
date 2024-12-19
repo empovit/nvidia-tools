@@ -158,6 +158,7 @@ MST devices:
 
 Note: the documentation seems broken and outdated, the command I had to run doesn't have a _Board ID_:
 
+```console
 # flint -d /dev/mst/mt4127_pciconf0 query
 Image type:            FS4
 FW Version:            26.33.1048
@@ -172,6 +173,7 @@ Image VSD:             N/A
 Device VSD:            N/A
 PSID:                  MT_0000000575
 Security Attributes:   secure-fw
+```
 
 ## Firmware
 
