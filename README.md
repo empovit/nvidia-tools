@@ -58,6 +58,52 @@ or `mlxup --query --query-format XML`:
 
 The output contains the PSID of a card, which is required for downloading the right firmware.
 
+The tool can use a local file or a directory, or query for updates online:
+
+```console
+# mlxup --online
+Querying Mellanox devices firmware ...
+
+Device #1:
+----------
+
+  Device Type:      ConnectX6LX
+  Part Number:      MCX631102AS-ADA_Ax
+  Description:      ConnectX-6 Lx EN adapter card; 25GbE; Dual-port SFP28; PCIe 4.0 x8; Secure Boot; No Crypto;
+  PSID:             MT_0000000575
+  PCI Device Name:  /dev/mst/mt4127_pciconf0
+  Base GUID:        e8ebd3030070cf12
+  Base MAC:         e8ebd370cf12
+  Versions:         Current        Available
+     FW             26.33.1048     26.43.1014
+     PXE            3.6.0502       3.7.0500
+     UEFI           14.26.0017     14.36.0016
+
+  Status:           Update required
+
+Release notes for the available Firmware:
+-----------------------------------------
+
+  For more details, please refer to the following FW release notes:
+    1- ConnectX3 (2.42.5000):    http://www.mellanox.com/pdf/firmware/ConnectX3-FW-2_42_5000-release_notes.pdf
+    2- ConnectX3Pro (2.42.5000): http://www.mellanox.com/pdf/firmware/ConnectX3Pro-FW-2_42_5000-release_notes.pdf
+    3- Connect-IB (10.16.1200):  http://www.mellanox.com/pdf/firmware/ConnectIB-FW-10_16_1200-release_notes.pdf
+    4- ConnectX4 (12.28.2006):   http://docs.mellanox.com/display/ConnectX4Firmwarev12282006
+    5- ConnectX4Lx (14.32.1010): http://docs.mellanox.com/display/ConnectX4LxFirmwarev14321010
+    6- ConnectX5 (16.35.4030):   http://docs.mellanox.com/display/ConnectX5Firmwarev16354030
+    7- ConnectX6 (20.43.1014):   http://docs.mellanox.com/display/ConnectX6Firmwarev20431014
+    8- ConnectX6Dx (22.43.1014):   http://docs.mellanox.com/display/ConnectX6DxFirmwarev22431014
+    9- ConnectX6Lx (26.43.1014):   http://docs.mellanox.com/display/ConnectX6LxFirmwarev26431014
+    10- BlueField2 (24.43.1014):   http://docs.mellanox.com/display/BlueField2Firmwarev24431014
+    11- ConnectX7 (28.43.1014):   http://docs.mellanox.com/display/ConnectX7Firmwarev28431014
+    12- BlueField3 (32.43.1014):   http://docs.mellanox.com/display/BlueField3Firmwarev32431014
+
+---------
+Found 1 device(s) requiring firmware update...
+
+Perform FW update? [y/N]: N
+```
+
 ### MFT
 
 [MFT](https://network.nvidia.com/products/adapter-software/firmware-tools/) - MFT package is a set of firmware management
@@ -216,3 +262,19 @@ Free servers on Beaker with:
 * [ConnectX-7](https://beaker.engineering.redhat.com/free/?systemsearch-0.table=Devices%2FDescription&systemsearch-0.keyvalue=&systemsearch-0.operation=contains&systemsearch-0.value=connectx-7)
 * [BlueField-2](https://beaker.engineering.redhat.com/free/?systemsearch-0.table=Devices%2FDescription&systemsearch-0.keyvalue=&systemsearch-0.operation=contains&systemsearch-0.value=bluefield-2)
 * [BlueField-3](https://beaker.engineering.redhat.com/free/?systemsearch-0.table=Devices%2FDescription&systemsearch-0.keyvalue=&systemsearch-0.operation=contains&systemsearch-0.value=bluefield-3)
+
+## Additional information
+
+* [BlueField DPU Update Script (out-of-band)](https://github.com/Mellanox/dpu-update)
+* [Upgrading BlueField Software Components Using PLDM](https://docs.nvidia.com/networking/display/bluefieldbsp491/upgrading+bluefield+software+components+using+pldm)
+  (part of [NVIDIA BlueField BSP v4.9.1 LTS](https://docs.nvidia.com/networking/display/bluefieldbsp491))
+  > The PLDM firmware update is a standardized protocol that enables out-of-band (OOO) firmware upgrades for devices by transferring firmware images between an update agent (e.g., the server's platform BMC) and target devices (i.e., NVIDIA® BlueField®-3). BlueField-3 firmware components can be upgraded using this method.
+
+  > The BlueField-3 PLDM firmware image includes the following components: NIC firmware, ATF/UEFI, BMC firmware, and CEC firmware (i.e., does not include Arm OS or DOCA software). The BlueField-3 PLDM image is specific to each BlueField-3 SKU and can be downloaded from the DOCA download page.
+* [Upgrading Firmware via DOCA](https://docs.nvidia.com/doca/sdk/nvidia+doca+installation+guide+for+linux/index.html#src-3416367849_id-.NVIDIADOCAInstallationGuideforLinuxv2.9.1-UpgradingFirmware) (part of [DOCA Documentation v2.9.1 LTS](https://docs.nvidia.com/doca/sdk/index.html))
+  > Added support for PLDM firmware update – BlueField-3 devices now support firmware updates
+via the PLDM type-5 protocol over MCTP over PCIe, allowing future updates to be performed
+through the platform's BMC. This implementation complies with PLDM specification version
+1.0.
+
+  > This section explains how to update the NIC firmware on a DOCA installed BlueField OS.
