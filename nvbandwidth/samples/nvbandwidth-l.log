@@ -1,0 +1,159 @@
+nvbandwidth Version: v0.7
+Built from Git version: v0.7
+
+Index, Name:
+	Description
+=======================
+0, host_to_device_memcpy_ce:
+	Host to device CE memcpy using cuMemcpyAsync
+
+1, device_to_host_memcpy_ce:
+	Device to host CE memcpy using cuMemcpyAsync
+
+2, host_to_device_bidirectional_memcpy_ce:
+	A host to device copy is measured while a device to host copy is run simultaneously.
+	Only the host to device copy bandwidth is reported.
+
+3, device_to_host_bidirectional_memcpy_ce:
+	A device to host copy is measured while a host to device copy is run simultaneously.
+	Only the device to host copy bandwidth is reported.
+
+4, device_to_device_memcpy_read_ce:
+	Measures bandwidth of cuMemcpyAsync between each pair of accessible peers.
+	Read tests launch a copy from the peer device to the target using the target's context.
+
+5, device_to_device_memcpy_write_ce:
+	Measures bandwidth of cuMemcpyAsync between each pair of accessible peers.
+	Write tests launch a copy from the target device to the peer using the target's context.
+
+6, device_to_device_bidirectional_memcpy_read_ce:
+	Measures bandwidth of cuMemcpyAsync between each pair of accessible peers.
+	A copy in the opposite direction of the measured copy is run simultaneously but not measured.
+	Read tests launch a copy from the peer device to the target using the target's context.
+
+7, device_to_device_bidirectional_memcpy_write_ce:
+	Measures bandwidth of cuMemcpyAsync between each pair of accessible peers.
+	A copy in the opposite direction of the measured copy is run simultaneously but not measured.
+	Write tests launch a copy from the target device to the peer using the target's context.
+
+8, all_to_host_memcpy_ce:
+	Measures bandwidth of cuMemcpyAsync between a single device and the host while simultaneously
+	running copies from all other devices to the host.
+
+9, all_to_host_bidirectional_memcpy_ce:
+	A device to host copy is measured while a host to device copy is run simultaneously.
+	Only the device to host copy bandwidth is reported.
+	All other devices generate simultaneous host to device and device to host interferring traffic.
+
+10, host_to_all_memcpy_ce:
+	Measures bandwidth of cuMemcpyAsync between the host to a single device while simultaneously
+	running copies from the host to all other devices.
+
+11, host_to_all_bidirectional_memcpy_ce:
+	A host to device copy is measured while a device to host copy is run simultaneously.
+	Only the host to device copy bandwidth is reported.
+	All other devices generate simultaneous host to device and device to host interferring traffic.
+
+12, all_to_one_write_ce:
+	Measures the total bandwidth of copies from all accessible peers to a single device, for each
+	device. Bandwidth is reported as the total inbound bandwidth for each device.
+	Write tests launch a copy from the target device to the peer using the target's context.
+
+13, all_to_one_read_ce:
+	Measures the total bandwidth of copies from all accessible peers to a single device, for each
+	device. Bandwidth is reported as the total outbound bandwidth for each device.
+	Read tests launch a copy from the peer device to the target using the target's context.
+
+14, one_to_all_write_ce:
+	Measures the total bandwidth of copies from a single device to all accessible peers, for each
+	device. Bandwidth is reported as the total outbound bandwidth for each device.
+	Write tests launch a copy from the target device to the peer using the target's context.
+
+15, one_to_all_read_ce:
+	Measures the total bandwidth of copies from a single device to all accessible peers, for each
+	device. Bandwidth is reported as the total inbound bandwidth for each device.
+	Read tests launch a copy from the peer device to the target using the target's context.
+
+16, host_to_device_memcpy_sm:
+	Host to device SM memcpy using a copy kernel
+
+17, device_to_host_memcpy_sm:
+	Device to host SM memcpy using a copy kernel
+
+18, host_to_device_bidirectional_memcpy_sm:
+	A host to device copy is measured while a device to host copy is run simultaneously.
+	Only the host to device copy bandwidth is reported.
+
+19, device_to_host_bidirectional_memcpy_sm:
+	A device to host copy is measured while a host to device copy is run simultaneously.
+	Only the device to host copy bandwidth is reported.
+
+20, device_to_device_memcpy_read_sm:
+	Measures bandwidth of a copy kernel between each pair of accessible peers.
+	Read tests launch a copy from the peer device to the target using the target's context.
+
+21, device_to_device_memcpy_write_sm:
+	Measures bandwidth of a copy kernel between each pair of accessible peers.
+	Write tests launch a copy from the target device to the peer using the target's context.
+
+22, device_to_device_bidirectional_memcpy_read_sm:
+	Measures bandwidth of a copy kernel between each pair of accessible peers. Copies are run
+	in both directions between each pair, and the sum is reported.
+	Read tests launch a copy from the peer device to the target using the target's context.
+
+23, device_to_device_bidirectional_memcpy_write_sm:
+	Measures bandwidth of a copy kernel between each pair of accessible peers. Copies are run
+	in both directions between each pair, and the sum is reported.
+	Write tests launch a copy from the target device to the peer using the target's context.
+
+24, all_to_host_memcpy_sm:
+	Measures bandwidth of a copy kernel between a single device and the host while simultaneously
+	running copies from all other devices to the host.
+
+25, all_to_host_bidirectional_memcpy_sm:
+	A device to host bandwidth of a copy kernel is measured while a host to device copy is run simultaneously.
+	Only the device to host copy bandwidth is reported.
+	All other devices generate simultaneous host to device and device to host interferring traffic using copy kernels.
+
+26, host_to_all_memcpy_sm:
+	Measures bandwidth of a copy kernel between the host to a single device while simultaneously
+	running copies from the host to all other devices.
+
+27, host_to_all_bidirectional_memcpy_sm:
+	A host to device bandwidth of a copy kernel is measured while a device to host copy is run simultaneously.
+	Only the host to device copy bandwidth is reported.
+	All other devices generate simultaneous host to device and device to host interferring traffic using copy kernels.
+
+28, all_to_one_write_sm:
+	Measures the total bandwidth of copies from all accessible peers to a single device, for each
+	device. Bandwidth is reported as the total inbound bandwidth for each device.
+	Write tests launch a copy from the target device to the peer using the target's context.
+
+29, all_to_one_read_sm:
+	Measures the total bandwidth of copies from all accessible peers to a single device, for each
+	device. Bandwidth is reported as the total outbound bandwidth for each device.
+	Read tests launch a copy from the peer device to the target using the target's context.
+
+30, one_to_all_write_sm:
+	Measures the total bandwidth of copies from a single device to all accessible peers, for each
+	device. Bandwidth is reported as the total outbound bandwidth for each device.
+	Write tests launch a copy from the target device to the peer using the target's context.
+
+31, one_to_all_read_sm:
+	Measures the total bandwidth of copies from a single device to all accessible peers, for each
+	device. Bandwidth is reported as the total inbound bandwidth for each device.
+	Read tests launch a copy from the peer device to the target using the target's context.
+
+32, host_device_latency_sm:
+	Host - device access latency using a pointer chase kernel
+	A 2MB buffer is allocated on the host and is accessed by the GPU
+
+33, device_to_device_latency_sm:
+	Measures latency of a pointer derefernce operation between each pair of accessible peers.
+	A 2MB buffer is allocated on a GPU and is accessed by the peer GPU to determine latency.
+	--bufferSize flag is ignored
+
+34, device_local_copy:
+	Measures bandwidth of cuMemcpyAsync between device buffers local to the GPU.
+
+

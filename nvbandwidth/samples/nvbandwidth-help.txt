@@ -1,0 +1,17 @@
+nvbandwidth Version: v0.7
+Built from Git version: v0.7
+
+nvbandwidth CLI:
+  -h [ --help ]                  Produce help message
+  -b [ --bufferSize ] arg (=512) Memcpy buffer size in MiB
+  -l [ --list ]                  List available testcases
+  -t [ --testcase ] arg          Testcase(s) to run (by name or index)
+  -p [ --testcasePrefixes ] arg  Testcase(s) to run (by prefix))
+  -v [ --verbose ]               Verbose output
+  -s [ --skipVerification ]      Skips data verification after copy
+  -d [ --disableAffinity ]       Disable automatic CPU affinity control
+  -i [ --testSamples ] arg (=3)  Iterations of the benchmark
+  -m [ --useMean ]               Use mean instead of median for results
+  -j [ --json ]                  Print output in json format instead of plain 
+                                 text.
+

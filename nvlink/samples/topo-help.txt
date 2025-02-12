@@ -1,0 +1,38 @@
+
+    topo -- Display topological information about the system.
+
+    Usage: nvidia-smi topo [options]
+
+    Options include:
+    [-m | --matrix]: Display the GPUDirect communication matrix for the system.
+    [-mp | --matrix_pci]: Display the GPUDirect communication matrix for the system (PCI Only).
+    [-i | --id]: Enumeration index, PCI bus ID or UUID. Provide comma
+                 separated values for more than one device
+                 Must be used in conjuction with -n or -p.
+    [-c | --cpu]: CPU number for which to display all GPUs with an affinity.
+    [-n | --nearest_gpus]: Display the nearest GPUs for a given traversal path.
+                   0 = a single PCIe switch on a dual GPU board
+                   1 = a single PCIe switch
+                   2 = multiple PCIe switches
+                   3 = a PCIe host bridge
+                   4 = an on-CPU interconnect link between PCIe host bridges
+                   5 = an SMP interconnect link between NUMA nodes
+                 Used in conjunction with -i which must be a single device ID.
+    [-p | --gpu_path]: Display the most direct path traversal for a pair of GPUs.
+                 Used in conjunction with -i which must be a pair of device IDs.
+    [-p2p | --p2pstatus]:      Displays the p2p status between the GPUs of a given p2p capability
+                   r - p2p read capabiity
+                   w - p2p write capability
+                   n - p2p nvlink capability
+                   a - p2p atomics capability
+                   p - p2p pcie capability
+
+    [-C | --get-numa-id-of-nearby-cpu]: Displays NUMA ID of the nearest CPU for a GPU
+                 Used in conjunction with -i which must be a single device ID.
+    [-M | --get-numa-id-of-nearby-mem]: Displays NUMA ID of the nearest memory for a GPU
+                 Used in conjunction with -i which must be a single device ID.
+    [-gnid | --gpu-numa-id]: Displays NUMA ID of the specified GPU
+                 Used in conjunction with -i which must be a single device ID.
+    [-h | --help]: Display help information
+
+

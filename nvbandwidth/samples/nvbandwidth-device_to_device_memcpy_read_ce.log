@@ -1,0 +1,33 @@
+nvbandwidth Version: v0.7
+Built from Git version: v0.7
+
+CUDA Runtime Version: 12040
+CUDA Driver Version: 12040
+Driver Version: 550.54.15
+
+Device 0: Tesla V100-SXM2-32GB (00000000:06:00)
+Device 1: Tesla V100-SXM2-32GB (00000000:07:00)
+Device 2: Tesla V100-SXM2-32GB (00000000:0a:00)
+Device 3: Tesla V100-SXM2-32GB (00000000:0b:00)
+Device 4: Tesla V100-SXM2-32GB (00000000:85:00)
+Device 5: Tesla V100-SXM2-32GB (00000000:86:00)
+Device 6: Tesla V100-SXM2-32GB (00000000:89:00)
+Device 7: Tesla V100-SXM2-32GB (00000000:8a:00)
+
+Running device_to_device_memcpy_read_ce.
+memcpy CE GPU(row) -> GPU(column) bandwidth (GB/s)
+           0         1         2         3         4         5         6         7
+ 0       N/A     24.25     24.25     48.48     48.47       N/A       N/A       N/A
+ 1     24.25       N/A     48.48     24.25       N/A     48.48       N/A       N/A
+ 2     24.25     48.47       N/A     48.48       N/A       N/A     24.25       N/A
+ 3     48.48     24.25     48.48       N/A       N/A       N/A       N/A     24.25
+ 4     48.48       N/A       N/A       N/A       N/A     24.25     24.25     48.48
+ 5       N/A     48.48       N/A       N/A     24.25       N/A     48.48     24.25
+ 6       N/A       N/A     24.25       N/A     24.25     48.48       N/A     48.48
+ 7       N/A       N/A       N/A     24.25     48.48     24.25     48.48       N/A
+
+SUM device_to_device_memcpy_read_ce 1163.71
+
+NOTE: The reported results may not reflect the full capabilities of the platform.
+Performance can vary with software drivers, hardware clocks, and system topology.
+

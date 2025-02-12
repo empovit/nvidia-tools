@@ -1,0 +1,59 @@
+nvbandwidth Version: v0.7
+Built from Git version: v0.7
+
+CUDA Runtime Version: 12040
+CUDA Driver Version: 12040
+Driver Version: 550.54.15
+
+Device 0: Tesla V100-SXM2-32GB (00000000:06:00)
+Device 1: Tesla V100-SXM2-32GB (00000000:07:00)
+Device 2: Tesla V100-SXM2-32GB (00000000:0a:00)
+Device 3: Tesla V100-SXM2-32GB (00000000:0b:00)
+Device 4: Tesla V100-SXM2-32GB (00000000:85:00)
+Device 5: Tesla V100-SXM2-32GB (00000000:86:00)
+Device 6: Tesla V100-SXM2-32GB (00000000:89:00)
+Device 7: Tesla V100-SXM2-32GB (00000000:8a:00)
+
+Running device_to_device_bidirectional_memcpy_read_sm.
+memcpy SM GPU(row) <-> GPU(column) Read1 bandwidth (GB/s)
+           0         1         2         3         4         5         6         7
+ 0       N/A     20.62     20.62     41.25     41.25       N/A       N/A       N/A
+ 1     20.62       N/A     41.25     20.62       N/A     41.25       N/A       N/A
+ 2     20.62     41.25       N/A     41.25       N/A       N/A     20.62       N/A
+ 3     41.25     20.62     41.25       N/A       N/A       N/A       N/A     20.62
+ 4     41.25       N/A       N/A       N/A       N/A     20.62     20.62     41.25
+ 5       N/A     41.25       N/A       N/A     20.62       N/A     41.25     20.62
+ 6       N/A       N/A     20.62       N/A     20.62     41.25       N/A     41.25
+ 7       N/A       N/A       N/A     20.62     41.25     20.62     41.25       N/A
+
+SUM device_to_device_bidirectional_memcpy_read_sm_read1 989.94
+
+memcpy SM GPU(row) <-> GPU(column) Read2 bandwidth (GB/s)
+           0         1         2         3         4         5         6         7
+ 0       N/A     20.62     20.62     41.25     41.25       N/A       N/A       N/A
+ 1     20.62       N/A     41.25     20.62       N/A     41.25       N/A       N/A
+ 2     20.62     41.25       N/A     41.25       N/A       N/A     20.62       N/A
+ 3     41.25     20.62     41.25       N/A       N/A       N/A       N/A     20.62
+ 4     41.25       N/A       N/A       N/A       N/A     20.62     20.62     41.25
+ 5       N/A     41.25       N/A       N/A     20.62       N/A     41.25     20.62
+ 6       N/A       N/A     20.62       N/A     20.62     41.25       N/A     41.25
+ 7       N/A       N/A       N/A     20.62     41.25     20.62     41.25       N/A
+
+SUM device_to_device_bidirectional_memcpy_read_sm_read2 989.94
+
+memcpy SM GPU(row) <-> GPU(column) Total bandwidth (GB/s)
+           0         1         2         3         4         5         6         7
+ 0       N/A     41.25     41.25     82.49     82.49       N/A       N/A       N/A
+ 1     41.25       N/A     82.49     41.25       N/A     82.49       N/A       N/A
+ 2     41.25     82.49       N/A     82.49       N/A       N/A     41.25       N/A
+ 3     82.49     41.25     82.49       N/A       N/A       N/A       N/A     41.25
+ 4     82.49       N/A       N/A       N/A       N/A     41.25     41.25     82.49
+ 5       N/A     82.49       N/A       N/A     41.25       N/A     82.49     41.25
+ 6       N/A       N/A     41.25       N/A     41.25     82.49       N/A     82.49
+ 7       N/A       N/A       N/A     41.25     82.49     41.25     82.49       N/A
+
+SUM device_to_device_bidirectional_memcpy_read_sm_total 1979.87
+
+NOTE: The reported results may not reflect the full capabilities of the platform.
+Performance can vary with software drivers, hardware clocks, and system topology.
+
