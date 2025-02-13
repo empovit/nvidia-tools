@@ -1,0 +1,112 @@
+GPU0 <-> GPU1:
+  * Atomic Supported: yes
+  * Perf Rank: 1
+GPU0 <-> GPU2:
+  * Atomic Supported: yes
+  * Perf Rank: 1
+GPU0 <-> GPU3:
+  * Atomic Supported: yes
+  * Perf Rank: 0
+GPU0 <-> GPU4:
+  * Atomic Supported: yes
+  * Perf Rank: 0
+GPU1 <-> GPU0:
+  * Atomic Supported: yes
+  * Perf Rank: 1
+GPU1 <-> GPU2:
+  * Atomic Supported: yes
+  * Perf Rank: 0
+GPU1 <-> GPU3:
+  * Atomic Supported: yes
+  * Perf Rank: 1
+GPU1 <-> GPU5:
+  * Atomic Supported: yes
+  * Perf Rank: 0
+GPU2 <-> GPU0:
+  * Atomic Supported: yes
+  * Perf Rank: 1
+GPU2 <-> GPU1:
+  * Atomic Supported: yes
+  * Perf Rank: 0
+GPU2 <-> GPU3:
+  * Atomic Supported: yes
+  * Perf Rank: 0
+GPU2 <-> GPU6:
+  * Atomic Supported: yes
+  * Perf Rank: 1
+GPU3 <-> GPU0:
+  * Atomic Supported: yes
+  * Perf Rank: 0
+GPU3 <-> GPU1:
+  * Atomic Supported: yes
+  * Perf Rank: 1
+GPU3 <-> GPU2:
+  * Atomic Supported: yes
+  * Perf Rank: 0
+GPU3 <-> GPU7:
+  * Atomic Supported: yes
+  * Perf Rank: 1
+GPU4 <-> GPU0:
+  * Atomic Supported: yes
+  * Perf Rank: 0
+GPU4 <-> GPU5:
+  * Atomic Supported: yes
+  * Perf Rank: 1
+GPU4 <-> GPU6:
+  * Atomic Supported: yes
+  * Perf Rank: 1
+GPU4 <-> GPU7:
+  * Atomic Supported: yes
+  * Perf Rank: 0
+GPU5 <-> GPU1:
+  * Atomic Supported: yes
+  * Perf Rank: 0
+GPU5 <-> GPU4:
+  * Atomic Supported: yes
+  * Perf Rank: 1
+GPU5 <-> GPU6:
+  * Atomic Supported: yes
+  * Perf Rank: 0
+GPU5 <-> GPU7:
+  * Atomic Supported: yes
+  * Perf Rank: 1
+GPU6 <-> GPU2:
+  * Atomic Supported: yes
+  * Perf Rank: 1
+GPU6 <-> GPU4:
+  * Atomic Supported: yes
+  * Perf Rank: 1
+GPU6 <-> GPU5:
+  * Atomic Supported: yes
+  * Perf Rank: 0
+GPU6 <-> GPU7:
+  * Atomic Supported: yes
+  * Perf Rank: 0
+GPU7 <-> GPU3:
+  * Atomic Supported: yes
+  * Perf Rank: 1
+GPU7 <-> GPU4:
+  * Atomic Supported: yes
+  * Perf Rank: 0
+GPU7 <-> GPU5:
+  * Atomic Supported: yes
+  * Perf Rank: 1
+GPU7 <-> GPU6:
+  * Atomic Supported: yes
+  * Perf Rank: 0
+GPU0 <-> CPU:
+  * Atomic Supported: no
+GPU1 <-> CPU:
+  * Atomic Supported: no
+GPU2 <-> CPU:
+  * Atomic Supported: no
+GPU3 <-> CPU:
+  * Atomic Supported: no
+GPU4 <-> CPU:
+  * Atomic Supported: no
+GPU5 <-> CPU:
+  * Atomic Supported: no
+GPU6 <-> CPU:
+  * Atomic Supported: no
+GPU7 <-> CPU:
+  * Atomic Supported: no

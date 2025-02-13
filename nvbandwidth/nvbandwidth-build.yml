@@ -8,7 +8,7 @@ spec:
     dockerfile: |
       FROM nvcr.io/nvidia/cuda:12.4.1-devel-ubi9
 
-      WORKDIR /build
+      WORKDIR /
 
       RUN dnf -y install boost-devel cmake make git && dnf clean all && rm -rf /var/cache/yum
       RUN git clone --single-branch --branch=main --depth=1 https://github.com/NVIDIA/nvbandwidth.git
