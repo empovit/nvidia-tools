@@ -1,0 +1,34 @@
+kind: BuildConfig
+apiVersion: build.openshift.io/v1
+metadata:
+  name: nccl-tests-build
+spec:
+  runPolicy: Serial
+  source:
+    dockerfile: |
+      FROM nvcr.io/nvidia/cuda:12.4.1-devel-ubi9
+
+      WORKDIR /
+
+      RUN dnf install -y cmake make git && dnf clean all && rm -rf /var/cache/yum
+      RUN git clone --single-branch --branch=master --depth=1 https://github.com/NVIDIA/nccl-tests.git
+      RUN cd nccl-tests && make
+
+      ENV PATH="${PATH}:/nccl-tests/build"
+  strategy:
+    dockerStrategy:
+      volumes:
+      - name: etc-pki-entitlement
+        mounts:
+        - destinationPath: /etc/pki/entitlement
+        source:
+          type: Secret
+          secret:
+            secretName: etc-pki-entitlement
+      from:
+        kind: "ImageStreamTag"
+        name: "cuda:12.4.1-devel-ubi9"
+  output:
+    to:
+      kind: "ImageStreamTag"
+      name: "nccl-tests:latest"

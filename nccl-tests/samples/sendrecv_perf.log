@@ -1,0 +1,94 @@
+[root@nccl-tests build]# CUDA_VISIBLE_DEVICES=0,6 NCCL_P2P_DISABLE=0 sendrecv_perf -g 2 -c 0 -n 100 -w 20
+# nThread 1 nGpus 2 minBytes 33554432 maxBytes 33554432 step: 1048576(bytes) warmup iters: 20 iters: 100 agg iters: 1 validation: 0 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid    280 on nccl-tests device  0 [0x06] Tesla V100-SXM2-32GB
+#  Rank  1 Group  0 Pid    280 on nccl-tests device  1 [0x89] Tesla V100-SXM2-32GB
+#
+#                                                              out-of-place                       in-place
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)
+nccl-tests: Test NCCL failure common.cu:394 'unhandled system error (run with NCCL_DEBUG=INFO for details) / '
+ .. nccl-tests pid 280: Test failure common.cu:592
+ .. nccl-tests pid 280: Test failure sendrecv.cu:103
+ .. nccl-tests pid 280: Test failure common.cu:625
+ .. nccl-tests pid 280: Test failure common.cu:1123
+ .. nccl-tests pid 280: Test failure common.cu:893
+[root@nccl-tests build]# CUDA_VISIBLE_DEVICES=0,6 NCCL_P2P_DISABLE=1 sendrecv_perf -g 2 -c 0 -n 100 -w 20
+# nThread 1 nGpus 2 minBytes 33554432 maxBytes 33554432 step: 1048576(bytes) warmup iters: 20 iters: 100 agg iters: 1 validation: 0 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid    296 on nccl-tests device  0 [0x06] Tesla V100-SXM2-32GB
+#  Rank  1 Group  0 Pid    296 on nccl-tests device  1 [0x89] Tesla V100-SXM2-32GB
+#
+#                                                              out-of-place                       in-place
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)
+nccl-tests: Test NCCL failure common.cu:394 'unhandled system error (run with NCCL_DEBUG=INFO for details) / '
+ .. nccl-tests pid 296: Test failure common.cu:592
+ .. nccl-tests pid 296: Test failure sendrecv.cu:103
+ .. nccl-tests pid 296: Test failure common.cu:625
+ .. nccl-tests pid 296: Test failure common.cu:1123
+ .. nccl-tests pid 296: Test failure common.cu:893
+[root@nccl-tests build]# CUDA_VISIBLE_DEVICES=0,2 NCCL_P2P_DISABLE=0 sendrecv_perf -g 2 -c 0 -n 100 -w 20
+# nThread 1 nGpus 2 minBytes 33554432 maxBytes 33554432 step: 1048576(bytes) warmup iters: 20 iters: 100 agg iters: 1 validation: 0 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid    312 on nccl-tests device  0 [0x06] Tesla V100-SXM2-32GB
+#  Rank  1 Group  0 Pid    312 on nccl-tests device  1 [0x0a] Tesla V100-SXM2-32GB
+#
+#                                                              out-of-place                       in-place
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)
+    33554432       8388608     float     sum      -1   1482.8   22.63   22.63    N/A   1482.5   22.63   22.63    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 22.6314
+#
+
+[root@nccl-tests build]# CUDA_VISIBLE_DEVICES=0,2 NCCL_P2P_DISABLE=1 sendrecv_perf -g 2 -c 0 -n 100 -w 20
+# nThread 1 nGpus 2 minBytes 33554432 maxBytes 33554432 step: 1048576(bytes) warmup iters: 20 iters: 100 agg iters: 1 validation: 0 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid    328 on nccl-tests device  0 [0x06] Tesla V100-SXM2-32GB
+#  Rank  1 Group  0 Pid    328 on nccl-tests device  1 [0x0a] Tesla V100-SXM2-32GB
+#
+#                                                              out-of-place                       in-place
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)
+nccl-tests: Test NCCL failure common.cu:394 'unhandled system error (run with NCCL_DEBUG=INFO for details) / '
+ .. nccl-tests pid 328: Test failure common.cu:592
+ .. nccl-tests pid 328: Test failure sendrecv.cu:103
+ .. nccl-tests pid 328: Test failure common.cu:625
+ .. nccl-tests pid 328: Test failure common.cu:1123
+ .. nccl-tests pid 328: Test failure common.cu:893
+[root@nccl-tests build]# CUDA_VISIBLE_DEVICES=0,3 NCCL_P2P_DISABLE=0 sendrecv_perf -g 2 -c 0 -n 100 -w 20
+# nThread 1 nGpus 2 minBytes 33554432 maxBytes 33554432 step: 1048576(bytes) warmup iters: 20 iters: 100 agg iters: 1 validation: 0 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid    344 on nccl-tests device  0 [0x06] Tesla V100-SXM2-32GB
+#  Rank  1 Group  0 Pid    344 on nccl-tests device  1 [0x0b] Tesla V100-SXM2-32GB
+#
+#                                                              out-of-place                       in-place
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)
+    33554432       8388608     float     sum      -1    904.5   37.10   37.10    N/A    821.2   40.86   40.86    N/A
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 38.9777
+#
+
+[root@nccl-tests build]# CUDA_VISIBLE_DEVICES=0,3 NCCL_P2P_DISABLE=1 sendrecv_perf -g 2 -c 0 -n 100 -w 20
+# nThread 1 nGpus 2 minBytes 33554432 maxBytes 33554432 step: 1048576(bytes) warmup iters: 20 iters: 100 agg iters: 1 validation: 0 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid    360 on nccl-tests device  0 [0x06] Tesla V100-SXM2-32GB
+#  Rank  1 Group  0 Pid    360 on nccl-tests device  1 [0x0b] Tesla V100-SXM2-32GB
+#
+#                                                              out-of-place                       in-place
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)
+nccl-tests: Test NCCL failure common.cu:394 'unhandled system error (run with NCCL_DEBUG=INFO for details) / '
+ .. nccl-tests pid 360: Test failure common.cu:592
+ .. nccl-tests pid 360: Test failure sendrecv.cu:103
+ .. nccl-tests pid 360: Test failure common.cu:625
+ .. nccl-tests pid 360: Test failure common.cu:1123
+ .. nccl-tests pid 360: Test failure common.cu:893
