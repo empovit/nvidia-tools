@@ -1,10 +1,9 @@
-https://docs.nvidia.com/dgx/dgx-rhel8-install-guide/installing-bf3-fw-steps.html
+# NIC Firmware Update Utilities
 
-# Firmware update utilities
+* [Installing BlueField-3 NIC Firmware](https://docs.nvidia.com/dgx/dgx-rhel8-install-guide/installing-bf3-fw-steps.html)
+* [mlxup - Update and Query Utility](https://network.nvidia.com/support/firmware/mlxup-mft/)
 
-https://network.nvidia.com/support/firmware/mlxup-mft/
-
-### mlxup
+## mlxup
 
 * mlxup - a firmware update and query utility. The utility enables scanning the server machine for available NVIDIA adapters
   and indicates whether firmware update is required for each adapter. To make it easier for our customers the mlxup can also
@@ -104,9 +103,9 @@ Found 1 device(s) requiring firmware update...
 Perform FW update? [y/N]: N
 ```
 
-### MFT
+## MFT
 
-[MFT](https://network.nvidia.com/products/adapter-software/firmware-tools/) - MFT package is a set of firmware management
+[MFT](https://network.nvidia.com/products/adapter-software/firmware-tools/) package is a set of firmware management
 tools used to generate a standard or customized NVIDIA firmware image, query for firmware information, and burn a firmware image.
 
 The actual download link for MFT is https://content.mellanox.com/MFT/mft-4.30.1-8-arm64-rpm.tgz (instead of https://www.mellanox.com/downloads/MFT/mft-4.30.1-8-arm64-rpm.tgz),
@@ -221,9 +220,9 @@ PSID:                  MT_0000000575
 Security Attributes:   secure-fw
 ```
 
-### mstflint
+## mstflint
 
-* Mentioned in the [alternative methods](https://docs.nvidia.com/dgx/dgx-rhel8-install-guide/installing-bf3-fw-steps.html#alternative-methods).
+* Mentioned in the [alternative methods](https://docs.nvidia.com/dgx/dgx-rhel8-install-guide/installing-bf3-fw-steps.html#alternative-methods) section.
 * Download [here](https://www.openfabrics.org/downloads/mstflint/), but can also be installed on RHEL.
 * [mstflint FW Burning Tool README](https://network.nvidia.com/pdf/firmware/mstflint_README.txt).
 
@@ -254,14 +253,6 @@ Security Attributes:   secure-fw
 ## Firmware
 
 Latest firmware binaries: https://network.nvidia.com/support/firmware/firmware-downloads/
-
-## Hardware
-
-Free servers on Beaker with:
-* [ConnectX-6](https://beaker.engineering.redhat.com/free/?systemsearch-0.table=Devices%2FDescription&systemsearch-0.keyvalue=&systemsearch-0.operation=contains&systemsearch-0.value=connectx-6)
-* [ConnectX-7](https://beaker.engineering.redhat.com/free/?systemsearch-0.table=Devices%2FDescription&systemsearch-0.keyvalue=&systemsearch-0.operation=contains&systemsearch-0.value=connectx-7)
-* [BlueField-2](https://beaker.engineering.redhat.com/free/?systemsearch-0.table=Devices%2FDescription&systemsearch-0.keyvalue=&systemsearch-0.operation=contains&systemsearch-0.value=bluefield-2)
-* [BlueField-3](https://beaker.engineering.redhat.com/free/?systemsearch-0.table=Devices%2FDescription&systemsearch-0.keyvalue=&systemsearch-0.operation=contains&systemsearch-0.value=bluefield-3)
 
 ## Additional information
 

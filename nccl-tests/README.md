@@ -1,7 +1,14 @@
-## Resources
+# NCCL Tests
 
-* [NCCL environment variables](https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/env.html)
-* [nccl-tests](https://github.com/NVIDIA/nccl-tests.git)
+[NVIDIA Collective Communication Library (NCCL) User Guide](https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/index.html)
+
+GitHub repo: [nccl-tests](https://github.com/NVIDIA/nccl-tests.git).
+
+## Running
+
+Refer to [Building and Using CUDA-based Images on Red Hat OpenShift](../build-container-images.md) to build a container image.
+
+Control the execution using [NCCL environment variables](https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/env.html) and [CUDA environment variables](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#cuda-environment-variables).
 
 Example:
 

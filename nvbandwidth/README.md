@@ -1,5 +1,5 @@
-# The `nvbandwidth` tool
+# nvbandwidth tool
 
-The tool's GitHub repo: [nvbandwidth](<https://github.com/NVIDIA/nvbandwidth.git>).
+GitHub repo: [nvbandwidth](https://github.com/NVIDIA/nvbandwidth.git).
 
 Running on OpenShift: [Building and Using CUDA-based Images on Red Hat OpenShift](../build-container-images.md)
