@@ -81,6 +81,8 @@ oc get secret etc-pki-entitlement -n openshift-config-managed -o json | jq 'del(
 
 See examples of build configuration under the respective tool directories, usually named `*-build.yml`.
 
+Review the build configuration YAML and update the CUDA image to match your required version, then deploy it:
+
 ```console
 oc apply -f <name>-build.yml [-n <namespace>]
 ```
