@@ -11,7 +11,7 @@ spec:
       WORKDIR /
 
       RUN dnf install -y cmake make git && dnf clean all && rm -rf /var/cache/yum
-      RUN git clone --single-branch --branch=master --depth=1 https://github.com/NVIDIA/cuda-samples.git
+      RUN git clone --single-branch --branch=v12.5 --depth=1 https://github.com/NVIDIA/cuda-samples.git
       RUN cd cuda-samples && make
 
       ENV PATH="${PATH}:/cuda-samples/bin/${NVARCH}/linux/release"
