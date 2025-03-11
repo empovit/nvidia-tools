@@ -9,3 +9,8 @@ There are also container image builds for some of the tools, so they can run con
 * [NIC firmware update](nic-firmware-update/)
 * [nvbandwidth](nvbandwidth/)
 * [nvidia-smi](nvidia-smi/)
+
+Useful external repos:
+
+* [Build RDMA GPU-Tools Container](https://github.com/schmaustech/gpu-tools)
+* [Containerization NVIDIA MFT Tooling](https://github.com/schmaustech/containerize-mft-tools)
