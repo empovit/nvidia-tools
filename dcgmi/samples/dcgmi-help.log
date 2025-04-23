@@ -1,0 +1,35 @@
+Usage: dcgmi
+   dcgmi subsystem
+   dcgmi -v
+
+Flags:
+  -v    vv          Get DCGMI version information
+        subsystem   The desired subsystem to be accessed.
+ Subsystems Available:
+        topo        GPU Topology [dcgmi topo -h for more info]
+        stats       Process Statistics [dcgmi stats -h for more info]
+        diag        System Validation/Diagnostic [dcgmi diag –h for more info]
+        policy      Policy Management [dcgmi policy –h for more info]
+        health      Health Monitoring [dcgmi health –h for more info]
+        config      Configuration Management [dcgmi config –h for more info]
+        group       GPU Group Management [dcgmi group –h for more info]
+        fieldgroup  Field Group Management [dcgmi fieldgroup –h for more info]
+        discovery   Discover GPUs on the system [dcgmi discovery –h for more
+                     info]
+        introspect  Gather info about DCGM itself [dcgmi introspect –h for
+                     more info]
+        nvlink      Displays NvLink link statuses and error counts [dcgmi nvlink
+                     –h for more info]
+        dmon        Stats Monitoring of GPUs [dcgmi dmon –h for more info]
+        modules     Control and list DCGM modules
+        profile     Control and list DCGM profiling metrics
+        set         Configure hostengine settings
+  --    ignore_rest Ignores the rest of the labeled arguments following this
+                     flag.
+      --version     Displays version information and exits.
+  -h  --help        Displays usage information and exits.
+
+ Please email dcgm-support@nvidia.com with any questions, bug reports, etc.
+
+ NVIDIA Datacenter GPU Management Interface
+
