@@ -1,5 +1,9 @@
 # Other tools
 
+* [DCGM](#dcgm)
+* [GPU Burn](#gpu-burn)
+* [RDMA Performance Test](#rdma-performance-test)
+
 ## DCGM
 
 * [Container images](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/cloud-native/containers/dcgm/tags)
