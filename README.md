@@ -10,6 +10,7 @@ There are also container image builds for some of the tools, so they can run con
 * [nvbandwidth](nvbandwidth/)
 * [nvidia-smi](nvidia-smi/)
 * [dcgmi](dcgmi/)
+* [Other tools](other/)
 
 Useful external repos:
 
